@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Лабораторная работа 1 — u82299</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #1a1a2e;
+      color: #ffd700;
+    }
+    h1 {
+      background: #16213e;
+      color: #ffd700;
+      padding: 15px;
+      border-radius: 5px;
+      border: 1px solid #ffd700;
+      text-align: center;
+    }
+    h2 {
+      color: #ffd700;
+      border-bottom: 2px solid #ffd700;
+      padding-bottom: 5px;
+    }
+    p, code {
+      color: #ffd700;
+    }
+    code {
+      background: #0f3460;
+      padding: 5px 10px;
+      border-radius: 4px;
+      display: inline-block;
+      margin: 5px 0;
+    }
+    img {
+      max-width: 100%;
+      border: 1px solid #ffd700;
+      border-radius: 5px;
+      margin: 10px 0;
+    }
+    .block {
+      background: #16213e;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 5px;
+      border: 1px solid #0f3460;
+      box-shadow: 0 2px 10px rgba(255,215,0,0.1);
+    }
+    .number {
+      color: #ffd700;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Лабораторная работа 1 — Сетевые команды</h1>
+
+  <div class="block">
+    <h2>1. Подключение к серверу по SSH</h2>
+    <p>Подключение к учебному серверу kubsu-dev.ru по SSH через порт 58528</p>
+    <code>ssh u82299@kubsu-dev.ru -p 58528</code>
+    <br><br>
+    <img src="ssh.png" alt="SSH подключение">
+  </div>
+
+  <div class="block">
+    <h2>2. ping kubsu.ru</h2>
+    <p>IP-адрес сервера kubsu.ru получен командой ping</p>
+    <code>ping -c 4 kubsu.ru</code>
+    <br><br>
+    <img src="ping.png" alt="ping">
+  </div>
+
+  <div class="block">
+    <h2>3. nslookup — A-записи</h2>
+    <p>A-записи доменов kubsu.ru и kubsu-dev.ru</p>
+    <code>nslookup kubsu.ru</code><br>
+    <code>nslookup kubsu-dev.ru</code>
+    <br><br>
+    <img src="nslookup_a.png" alt="nslookup A">
+  </div>
+
+  <div class="block">
+    <h2>4. nslookup — MX-записи</h2>
+    <p>MX-записи доменов kubsu.ru и kubsu-dev.ru</p>
+    <code>nslookup -type=MX kubsu.ru</code><br>
+    <code>nslookup -type=MX kubsu-dev.ru</code>
+    <br><br>
+    <img src="nslookup_mx.png" alt="nslookup MX">
+  </div>
+
+  <div class="block">
+    <h2>5. whois</h2>
+    <p>Дата регистрации доменов kubsu.ru и kubsu-dev.ru</p>
+    <code>whois kubsu.ru</code><br>
+    <code>whois kubsu-dev.ru</code>
+    <br><br>
+    <img src="whois.png" alt="whois">
+  </div>
+
+  <div class="block">
+    <h2>6. Клонирование репозитория на сервер</h2>
+    <p>Клонирование GitHub репозитория в каталог www на учебном сервере</p>
+    <code>cd www</code><br>
+    <code>git clone https://github.com/твой_логин/web-task1.git hw1</code>
+    <br><br>
+    <img src="git_clone.png" alt="git clone">
+  </div>
+
+  <div class="block">
+    <h2>7. FileZilla SFTP</h2>
+    <p>Скачивание файлов задания с сервера на локальный компьютер через SFTP</p>
+    <code>Хост: kubsu-dev.ru | Порт: 58528 | Протокол: SFTP</code>
+    <br><br>
+    <img src="filezilla.png" alt="FileZilla">
+  </div>
+
+</body>
+</html>
